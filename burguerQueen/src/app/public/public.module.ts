@@ -4,6 +4,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PublicRoutingModule } from "./public-routing.module";
 import { CommonModule } from '@angular/common';
 import { PublicComponent } from "./public.component";
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
     imports:[
@@ -13,7 +14,8 @@ import { PublicComponent } from "./public.component";
     declarations:[
     PublicComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    NavbarComponent
   ],
     exports:[],
     providers:[]
