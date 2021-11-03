@@ -5,6 +5,9 @@ import { PublicRoutingModule } from "./public-routing.module";
 import { CommonModule } from '@angular/common';
 import { PublicComponent } from "./public.component";
 import { NavbarComponent } from './navbar/navbar.component';
+import { MainComponent } from './home/main/main.component';
+import { ChefComponent } from './chef/chef.component';
+import { WaiterComponent } from './waiter/waiter.component';
 
 @NgModule({
     imports:[
@@ -15,7 +18,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     PublicComponent,
     HomeComponent,
     MenuComponent,
-    NavbarComponent
+    NavbarComponent,
+    MainComponent,
+    ChefComponent,
+    WaiterComponent
   ],
     exports:[],
     providers:[]
