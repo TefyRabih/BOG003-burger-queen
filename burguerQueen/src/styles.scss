@@ -1,0 +1,27 @@
+// out: css/style.css, sourcemap: true, compress: true, autoprefixer: true | // main: style.less
+
+$font-family-sans-serif:        'Lato', sans-serif;
+
+$primary:                       #121421;
+$secondary:                     #1E202C;
+$success:                       #6EBB7B;
+$warning:                       #FDAF4B;
+$danger:                        #EE4633;
+
+// input
+$input-bg:                      rgba(109,114,132,0.4);
+$input-border-color:            #121421;
+$input-color:                   rgba(255,255,255,0.75);
+
+//Select
+$form-select-indicator-color:   #121421;
+$form-select-bg-size:             22px 20px;
+$form-select-color:             #F15A33;
+
+//Boton
+$btn-font-weight:                 bold;
+
+//nav Active
+$component-active-bg:           #4E5261;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
