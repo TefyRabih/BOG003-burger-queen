@@ -1,4 +1,4 @@
-// out: css/style.css, sourcemap: true, compress: true, autoprefixer: true | // main: style.less
+// out: styles.css, sourcemap: true, compress: true, autoprefixer: true | // main: styles.less
 
 $font-family-sans-serif:        'Lato', sans-serif;
 
@@ -7,6 +7,9 @@ $secondary:                     #1E202C;
 $success:                       #6EBB7B;
 $warning:                       #FDAF4B;
 $danger:                        #EE4633;
+$dark:                          #494B54;
+$light:                         #8C92A8;
+$info:                          #4E5261;
 
 // input
 $input-bg:                      rgba(109,114,132,0.4);
@@ -15,13 +18,42 @@ $input-color:                   rgba(255,255,255,0.75);
 
 //Select
 $form-select-indicator-color:   #121421;
-$form-select-bg-size:             22px 20px;
+$form-select-bg-size:           22px 20px;
 $form-select-color:             #F15A33;
 
 //Boton
-$btn-font-weight:                 bold;
-
+$btn-font-weight:               bold;
+$btn-font-size:                 19px;
+$btn-font-size-lg:              22px;
 //nav Active
-$component-active-bg:           #4E5261;
+$component-active-bg:          white;
+$component-active-color:       $primary;
+
+//nav menu
+$nav-tabs-link-active-bg:       $info;
+$nav-tabs-link-active-color:    $primary;
+
+
+// Estilos propios
+
+.cont-h{
+    height: 94vh;
+}
+
+.gradient-yellow {
+    background-image: linear-gradient(to bottom, rgba(241, 90, 51, 0.9)1%, rgba(255,255,255,0.0) 26%, rgba(255,255,255,0.0) 76%, rgba(241, 90, 51, 0.9) 100%);
+  }
+
+.gradient-green {
+    background-image: linear-gradient(to bottom, rgba(56, 140, 97, 0.9)1%, rgba(255,255,255,0.0) 26%, rgba(255,255,255,0.0) 76%, rgba(56, 140, 97, 0.9) 100%);
+  }
+
+.gradient-red {
+    background-image: linear-gradient(to bottom, rgba(250, 124, 100, 0.6)1%, rgba(255,255,255,0.0) 26%, rgba(255,255,255,0.0) 76%, rgba(250, 124, 100, 0.6) 100%);
+  }
+
+.alert-gradient {
+  background: radial-gradient(circle, rgba(255,255,255,0.0) 20%, rgba(241, 90, 51, 0.9) 90%, rgba(238,70,50,1) 100%);
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap";

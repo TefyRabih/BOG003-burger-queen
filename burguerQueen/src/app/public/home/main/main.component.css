@@ -1,9 +1,4 @@
-.cont-h{
-    height: 94vh;
-}
-.btn {
-    background-image: linear-gradient(to bottom, rgba(241, 90, 51, 0.9)1%, rgba(255,255,255,0.0) 26%, rgba(255,255,255,0.0) 76%, rgba(241, 90, 51, 0.9) 100%);
-  }
+
 .form-control{
 border-bottom: 4px solid #6D7284 !important;
 }
