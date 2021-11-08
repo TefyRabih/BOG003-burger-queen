@@ -1,0 +1,38 @@
+.border-menu-init{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.border-menu{
+    border-radius: 8px;
+}
+
+.menu-h{
+    height: 68vh;
+}
+
+.menu-m{
+    margin-left: 5px;
+    margin-right: 4px;
+}
+.nav-link img{
+    height: 41px;
+    padding-top: 5px;
+  }
+
+  .nav-link p{
+
+    margin-bottom: 0px;
+  }
+/*nav menu*/
+.nav-tabs{
+    background-color: #292B37;
+  }
+
+  .options{
+    width: 114px;
+  }
+
+  .row div p{
+    font-size: 1.2rem;
+  }

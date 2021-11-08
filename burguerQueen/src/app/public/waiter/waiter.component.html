@@ -1,58 +1,11 @@
 <div class="container-fluid bg-primary cont-h">
-  <header class="row border-bottom border-info border-2">
-    <div class="col p-0">
-      <h2 class="text-warning text-center pb-3 pt-3 border-end border-info mb-0">Para entregar</h2>
-    </div>
-    <div class="col p-0">
-      <h2 class="text-white text-center pb-3 pt-3 mb-0 border-start border-info">Entregadas</h2>
-    </div>
-  </header>
+  <app-waiter-header></app-waiter-header>
   <main class="row order-h bg-img">
     <section class="col border rounded border-info border-2 mt-2 ms-2 mb-2 me-1 d-flex flex-row ">
-      <div class="text-center">
-        <button class="btn btn-success gradient-green btn-ok-w p-1 m-2" type="button" name="button">
-          <div class="d-flex justify-content-between border-bottom border-info border-2">
-            <h4 class="mb-0 ps-2 pb-1 fw-bold">#pedido</h4>
-            <h4 class="mb-0 pe-2 pb-1 fw-bold">hora</h4>
-          </div>
-          <p class="mb-0 ps-2 fw-normal">Nombre del Cliente</p>
-          <p class="mb-0 ps-2 fw-normal">#Mesa</p>
-        </button>
-        <button class="btn btn-success gradient-green btn-ok-w p-1 m-2" type="button" name="button">
-          <div class="d-flex justify-content-between border-bottom border-info border-2">
-            <h4 class="mb-0 ps-2 pb-1 fw-bold">#pedido</h4>
-            <h4 class="mb-0 pe-2 pb-1 fw-bold">hora</h4>
-          </div>
-          <p class="mb-0 ps-2 fw-normal">Nombre del Cliente</p>
-          <p class="mb-0 ps-2 fw-normal">#Mesa</p>
-        </button>
-        <button class="btn btn-success gradient-green btn-ok-w p-1 m-2" type="button" name="button">
-          <div class="d-flex justify-content-between border-bottom border-info border-2">
-            <h4 class="mb-0 ps-2 pb-1 fw-bold">#pedido</h4>
-            <h4 class="mb-0 pe-2 pb-1 fw-bold">hora</h4>
-          </div>
-          <p class="mb-0 ps-2 fw-normal">Nombre del Cliente</p>
-          <p class="mb-0 ps-2 fw-normal">#Mesa</p>
-        </button>
-      </div>
+      <app-waiter-ok></app-waiter-ok>
     </section>
     <section class="col border rounded border-info border-2 mt-2 ms-1 mb-2 me-2 pt-2">
-      <div class="d-flex flex-row justify-content-evenly">
-        <div class="card text-center btn-ok-w bg-dark border border-light text-white" style="width: 18rem;">
-          <div class="card-body">
-            <h4 class="card-title">#Pedido</h4>
-            <p class="fs-5 fw-light card-text">Nombre del Cliente</p>
-            <button class="btn btn-warning gradient-yellow" type="button" name="button" disabled>Realizar pago</button>
-          </div>
-        </div>
-        <div class="card text-center btn-ok-w bg-dark border border-light text-white" style="width: 18rem;">
-          <div class="card-body">
-            <h4 class="card-title">#Pedido</h4>
-            <p class="fs-5 fw-light card-text">Nombre del Cliente</p>
-            <button class="btn btn-warning gradient-yellow" type="button" name="button" disabled>Realizar pago</button>
-          </div>
-        </div>
-      </div>
+      <app-waiter-done></app-waiter-done>
     </section>
   </main>
 </div>
