@@ -1,0 +1,11 @@
+main{
+    background-image: url(../../../assets/img/hambuguesoLogo.png) !important;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.order-h{
+height: 81vh;
+}
+.otro{
+    background-color: rgba(78, 82, 97, .3);
+}
