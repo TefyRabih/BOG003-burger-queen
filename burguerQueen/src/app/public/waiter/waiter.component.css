@@ -5,6 +5,13 @@
 .card-w{
   width: 150px !important;
 }
+
 .order-h{
   height: 81vh;
+}
+
+.bg-img{
+  background-image: url(../../../assets/img/hambuguesoLogo.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
