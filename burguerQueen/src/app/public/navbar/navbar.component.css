@@ -5,3 +5,19 @@
 #icon-ok{
     width:55px;
 }
+
+#alert{
+  left: 7vw;
+  top: 2vh;
+}
+
+@media(min-width:1340px){
+  #alert{
+    left: 8vw;
+  }
+}
+@media(min-width:1900px){
+  #alert{
+    left: 9.2vw;
+  }
+}
