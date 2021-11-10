@@ -11,9 +11,9 @@
   top: 2vh;
 }
 
-@media(min-width:1340px){
+@media(min-width:1270px){
   #alert{
-    left: 8vw;
+    left: 8.5vw;
   }
 }
 @media(min-width:1900px){

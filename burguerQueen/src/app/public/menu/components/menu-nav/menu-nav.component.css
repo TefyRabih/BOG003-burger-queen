@@ -36,3 +36,12 @@
   .row div p{
     font-size: 1.2rem;
   }
+
+  @media(min-width:1270px){
+    .nav p{
+      font-size: 1.15rem !important;
+    }
+    .tab-content p{
+      font-size: 1.28rem !important;
+    }
+  }

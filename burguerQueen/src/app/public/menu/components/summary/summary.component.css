@@ -9,3 +9,17 @@
   .img-btn{
     width: 22px;
   }
+
+  @media(min-width:1270px){
+    .div-name-res div h5{
+      font-size: 1.5rem !important;
+    }
+
+    .div-res p{
+      font-size: 1.2rem !important;
+    }
+
+    .div-total div{
+      font-size: 1.8rem !important;
+    }
+  }
