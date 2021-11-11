@@ -21,6 +21,8 @@ import { WaiterHeaderComponent } from './waiter/components/waiter-header/waiter-
 import { WaiterOkComponent } from './waiter/components/waiter-ok/waiter-ok.component';
 import { WaiterDoneComponent } from './waiter/components/waiter-done/waiter-done.component';
 
+import { MenuService } from "./services/menu.service";
+
 
 @NgModule({
     imports:[
@@ -47,7 +49,9 @@ import { WaiterDoneComponent } from './waiter/components/waiter-done/waiter-done
     WaiterDoneComponent
   ],
     exports:[],
-    providers:[]
+    providers:[
+        MenuService
+    ]
 })
 
 export class PublicModule{
