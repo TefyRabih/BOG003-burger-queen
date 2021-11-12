@@ -3,5 +3,5 @@ export class Item {
   name: string | undefined;
   options: string[] | undefined;
   price: number[] | undefined;
-  items: string[] | undefined;
+  items?: string[] | undefined;
 }
