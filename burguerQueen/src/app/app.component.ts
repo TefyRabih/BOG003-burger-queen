@@ -25,8 +25,7 @@ export class AppComponent {
           id: "ac2",
           name: "Acompañamiento",
           options: ["papas fritas", "aros de cebolla"],
-          price: [5, 5],
-          items: []
+          price: [5, 5]
         },
         {
           id: "ac3",

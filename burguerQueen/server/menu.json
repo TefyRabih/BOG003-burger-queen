@@ -33,7 +33,7 @@
             5,
             5
           ],
-          "items": []
+          "item s": []
         },
         {
           "id": "ac3",
@@ -41,8 +41,8 @@
           "options": [
             "agua 500ml",
             "agua 700ml",
-            "bebida-gaseosa 500ml",
-            "bebida-gaseosa 700ml"
+            "gaseosa 500ml",
+            "gaseosa 700ml"
           ],
           "price": [
             5,
@@ -99,7 +99,7 @@
     {
       "id": "m3",
       "name": "Adicionales",
-      "img": "../../../assets/img/dadicionalesIcon.svg",
+      "img": "../../../assets/img/adicionalesIcon.svg",
       "items": [
         {
           "id": "a1",
