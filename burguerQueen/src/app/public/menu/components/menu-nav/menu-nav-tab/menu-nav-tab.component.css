@@ -1,0 +1,17 @@
+.nav-link img{
+    height: 41px;
+    padding-top: 5px;
+  }
+.nav-link{
+    border: none;
+}
+.nav-link p{
+
+    margin-bottom: 0px;
+  }
+
+@media(min-width:1270px){
+.nav-link p{
+      font-size: 1.2rem !important;
+    }
+  }

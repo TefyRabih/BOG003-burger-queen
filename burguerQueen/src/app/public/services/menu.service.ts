@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import {tap, catchError, map} from 'rxjs/operators'
+import { Menu } from 'src/app/clases/menu';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,8 @@ export class MenuService {
 
   constructor(private http: HttpClient) {}
 
-  getData(): Observable<any>{
-    return this.http.get('http://localhost:3333/menu').pipe(
+  getData(): Observable<Menu[]>{
+    return this.http.get<Menu[]>('http://localhost:3333/menu').pipe(
       catchError(this.handleError)
 
     )

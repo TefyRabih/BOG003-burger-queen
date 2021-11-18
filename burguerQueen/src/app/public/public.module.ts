@@ -22,6 +22,9 @@ import { WaiterOkComponent } from './waiter/components/waiter-ok/waiter-ok.compo
 import { WaiterDoneComponent } from './waiter/components/waiter-done/waiter-done.component';
 
 import { MenuService } from "./services/menu.service";
+import { MenuNavTabComponent } from './menu/components/menu-nav/menu-nav-tab/menu-nav-tab.component';
+import { MenuTabContentComponent } from './menu/components/menu-nav/menu-tab-content/menu-tab-content.component';
+import { TabContentBtnComponent } from './menu/components/menu-nav/menu-tab-content/tab-content-btn/tab-content-btn.component';
 
 
 @NgModule({
@@ -46,7 +49,10 @@ import { MenuService } from "./services/menu.service";
     MenuNavComponent,
     WaiterHeaderComponent,
     WaiterOkComponent,
-    WaiterDoneComponent
+    WaiterDoneComponent,
+    MenuNavTabComponent,
+    MenuTabContentComponent,
+    TabContentBtnComponent
   ],
     exports:[],
     providers:[
