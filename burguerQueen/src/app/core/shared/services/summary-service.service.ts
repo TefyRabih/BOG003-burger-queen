@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Options } from 'src/app/intefaces/menu.interface';
+import { Options } from 'src/app/interfaces/menu.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -28,7 +28,7 @@ export class SummaryService {
     }
     this.summarySubject.next(this.summary);
   }
-  
+
   private calcTotal():void {
     const total= this.summary.reduce((acc, el)=> acc += (el.price * el.qty), 0);
     this.totalSubject.next(total);
@@ -46,16 +46,16 @@ export class SummaryService {
   }
 
   deleteProduct(id:string): void{
-    const newSummary = this.summary.filter(e => e.id !== id) 
+    const newSummary = this.summary.filter(e => e.id !== id)
     this.summarySubject.next(newSummary);
     this.summary = newSummary;
     this.calcTotal();
-  } 
+  }
 
   lessProduct(id:string): void{
     this.summary.forEach( e =>{
       if( e.id === id){
-        e.qty -= 1 
+        e.qty -= 1
       }
     })
     this.calcTotal();

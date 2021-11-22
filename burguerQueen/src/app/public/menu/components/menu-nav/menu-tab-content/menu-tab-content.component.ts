@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Options } from 'src/app/intefaces/menu.interface';
-import { Menu } from 'src/app/intefaces/menu.interface';
+import { Options, Menu } from 'src/app/interfaces/menu.interface';
 import { SummaryService } from 'src/app/core/shared/services/summary-service.service';
 
 
