@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Menu } from 'src/app/clases/menu';
-import { Options } from 'src/app/clases/items';
+import { SummaryService } from '../../../../../core/shared/services/summary.service'
+import { Menu } from 'src/app/interfaces/menu.interface';
+import { Options } from 'src/app/interfaces/menu.interface';
 
 
 @Component({
@@ -10,12 +11,12 @@ import { Options } from 'src/app/clases/items';
 })
 export class MenuTabContentComponent implements OnInit {
 @Input() e!:Menu;
-  constructor() { }
+  constructor(private summarySvc: SummaryService) { }
 
   ngOnInit(): void {
   }
-  addToSummary(option:Options): void {
-    console.log('padre: ', option);
-    
+
+  addToSummary(option: Options): void {
+    this.summarySvc.updateSummary(option);
   }
 }
