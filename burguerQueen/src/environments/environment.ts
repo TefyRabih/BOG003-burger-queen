@@ -3,7 +3,24 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  firebase: {
+    projectId: 'burger-queen-194b8',
+    appId: '1:459608563400:web:d132e230a3d94a29d50ffd',
+    storageBucket: 'burger-queen-194b8.appspot.com',
+    locationId: 'southamerica-east1',
+    apiKey: 'AIzaSyB7O_VmSNBjNh8fo9bJcWm6Ct10VM_Spyk',
+    authDomain: 'burger-queen-194b8.firebaseapp.com',
+    messagingSenderId: '459608563400',
+  },
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyB7O_VmSNBjNh8fo9bJcWm6Ct10VM_Spyk",
+    authDomain: "burger-queen-194b8.firebaseapp.com",
+    projectId: "burger-queen-194b8",
+    storageBucket: "burger-queen-194b8.appspot.com",
+    messagingSenderId: "459608563400",
+    appId: "1:459608563400:web:d132e230a3d94a29d50ffd"
+  }
 };
 
 /*

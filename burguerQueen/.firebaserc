@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "burger-queen-194b8": {
+      "hosting": {
+        "burguerQueen": [
+          "burger-queen-194b8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "burger-queen-194b8"
+  }
+}

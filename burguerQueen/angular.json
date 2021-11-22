@@ -107,6 +107,16 @@
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "burguerQueen:build:production",
+            "firebaseProject": "burger-queen-194b8",
+            "firebaseHostingSite": "burger-queen-194b8"
+          }
         }
       }
     }
