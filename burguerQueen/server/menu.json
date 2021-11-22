@@ -10,10 +10,12 @@
            "name": "Hamburguesa",
            "options": [
              {
+               "id": "acH1",
                "name": "sencilla",
                "price": 10
              },
              {
+              "id": "acH2",
                "name": "doble",
                "price": 10
              }
@@ -24,13 +26,19 @@
            "name": "Tipo",
            "options": [
              {
-               "name": "res"
+              "id": "acT1",
+               "name": "res",
+               "price": 0
              },
              {
-               "name": "pollo"
+              "id": "acT2",
+               "name": "pollo",
+               "price": 0
              },
              {
-               "name": "vegetariana"
+              "id": "acT3",
+               "name": "vegetariana",
+               "price": 0
              }
            ]
          },
@@ -39,10 +47,12 @@
            "name": "Acompañamiento",
            "options": [
              {
+              "id": "acA1",
                "name": "papas fritas",
                "price": 5
              },
              {
+              "id": "acA2",
                "name": "aros de cebolla",
                "price": 10
              }
@@ -53,18 +63,22 @@
            "name": "Bebidas",
            "options": [
              {
+              "id": "acB1",
                "name": "agua 500ml",
                "price": 5
              },
              {
+              "id": "acB2",
                "name": "agua 700ml",
                "price": 7
              },
              {
+              "id": "acB3",
                "name": "gaseosa 500ml",
                "price": 7
              },
              {
+              "id": "acB4",
                "name": "gaseosa 700ml",
                "price": 10
              }
@@ -82,10 +96,12 @@
            "name": "Cafe",
            "options": [
              {
+              "id": "dc1",
                "name": "americano",
                "price": 5
              },
              {
+              "id": "dc2",
                "name": "con leche",
                "price": 7
              }
@@ -96,6 +112,7 @@
            "name": "Sandwich",
            "options": [
              {
+              "id": "dS1",
                "name": "jamon y queso",
                "price": 10
              }
@@ -106,6 +123,7 @@
            "name": "Bebidas",
            "options": [
              {
+              "id": "dB1",
                "name": "jugo natural",
                "price": 7
              }
@@ -123,10 +141,12 @@
            "name": "Adicionales",
            "options": [
              {
+              "id": "aA1",
                "name": "huevo",
                "price": 1
              },
              {
+              "id": "aA2",
                "name": "queso",
                "price": 1
              }

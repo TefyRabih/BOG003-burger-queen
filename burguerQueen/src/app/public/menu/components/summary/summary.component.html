@@ -16,45 +16,34 @@
   </div>
   <div class="row resume-h text-white div-res">
     <div class="col">
-      <div class="row">
-        <div class="col-1"><button class="btn p-0"><img class="img-btn" src="../../../assets/img/menosIcon.png" alt="menos"></button></div>
-        <div class="col-1 ps-2"><button class="btn p-0"><img class="img-btn" src="../../../assets/img/basuraIcon.png" alt="menos"></button></div>
+      <div class="row " *ngFor="let item of finalOrder$ | async">
+        <div class="col-1">
+          <button class="btn p-0" #dataId [attr.data-id]= "item.id">
+            <img (click)= "onClickLess(dataId)" class="img-btn" src="../../../assets/img/menosIcon.png" alt="menos"></button>
+        </div>
+        <div class="col-1 ps-2">
+          <button class="btn p-0" #dataId [attr.data-id]= "item.id">
+            <img (click)= "onClickDelete(dataId)" class="img-btn" src="../../../assets/img/basuraIcon.png" alt="menos">
+          </button>
+        </div>
         <div class="col-5 col-xl-4 ps-1">
-          <p class="mb-1 resume-font">Hamburgesa sencilla</p>
-          <p class="ms-3 mb-1" id='items'> hola </p>
+          <p class="mb-1 resume-font">{{item.name | titlecase}}</p>
         </div>
         <div class="col-1 col-xl-2 text-center">
-          <p class="mb-1">1</p>
-          <p class="mb-1">1</p>
+          <p class="mb-1">{{item.qty}}</p>
         </div>
         <div class="col-2">
-          <p class="mb-1">$10</p>
+          <p class="mb-1">{{item.price | currency}}</p>
         </div>
         <div class="col-2">
-          <p class="mb-1">$10</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-1"><button class="btn p-0"><img class="img-btn" src="../../../assets/img/menosIcon.png" alt="menos"></button></div>
-        <div class="col-1 ps-2"><button class="btn p-0"><img class="img-btn" src="../../../assets/img/basuraIcon.png" alt="menos"></button></div>
-        <div class="col-5 col-xl-4 ps-2">
-          <p class="mb-1">Aros de cebolla</p>
-        </div>
-        <div class="col-1 col-xl-2 text-center">
-          <p class="mb-1">1</p>
-        </div>
-        <div class="col-2">
-          <p class="mb-1">$5</p>
-        </div>
-        <div class="col-2">
-          <p class="mb-1">$5</p>
+          <p class="mb-1">{{item.price * item.qty | currency}}</p>
         </div>
       </div>
     </div>
   </div>
   <div class="row bg-primary text-white p-2 fs-4 div-total">
     <div class="col-10">Total</div>
-    <div class="col-2 text-center">$20</div>
+    <div class="col-2 text-center">{{totalOrder$ | async | currency}}</div>
   </div>
   <div class="row">
   </div>
