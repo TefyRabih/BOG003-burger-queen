@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Options } from 'src/app/clases/items';
+import { Options } from 'src/app/intefaces/menu.interface';
 
 @Component({
   selector: 'app-tab-content-btn',

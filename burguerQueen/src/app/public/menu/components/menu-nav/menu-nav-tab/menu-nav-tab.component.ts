@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Menu } from 'src/app/clases/menu';
+import { Menu } from 'src/app/intefaces/menu.interface';
 
 @Component({
   selector: 'app-menu-nav-tab',

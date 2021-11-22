@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Options } from 'src/app/clases/items';
-import { Menu } from 'src/app/clases/menu';
+
+import { Menu } from 'src/app/intefaces/menu.interface';
+
+import { SummaryService } from 'src/app/core/shared/services/summary-service.service';
 import { MenuService } from 'src/app/public/services/menu.service';
 
 @Component({
@@ -10,9 +12,9 @@ import { MenuService } from 'src/app/public/services/menu.service';
 })
 export class MenuNavComponent implements OnInit {
 
-  menuData!: Menu[];
+  menuData!: Menu[]; 
 
-  constructor(private dataService:MenuService) { }
+  constructor(private dataService:MenuService, private summarySvc:SummaryService) { }
 
   ngOnInit(): void {
     this.getData();
@@ -26,5 +28,9 @@ export class MenuNavComponent implements OnInit {
       error => console.log(error)
           
     ) 
+  }
+
+  onClickCancel(): void{
+    this.summarySvc.reset();
   }
 }
