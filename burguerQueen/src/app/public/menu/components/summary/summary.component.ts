@@ -11,7 +11,7 @@ export class SummaryComponent implements OnInit {
   totalOrder$ = this.summarySvc.totalAction$;
 
   constructor( private summarySvc:SummaryService) {}
-  
+
   ngOnInit(): void {
   }
 
