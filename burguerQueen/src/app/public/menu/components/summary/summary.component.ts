@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SummaryService } from 'src/app/core/shared/services/summary-service.service';
+import { SummaryService } from '../../../../core/shared/services/summary.service'
+// import { Options } from '../../../../interfaces/menu.interface'
 
 @Component({
   selector: 'app-summary',
@@ -7,21 +8,25 @@ import { SummaryService } from 'src/app/core/shared/services/summary-service.ser
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent implements OnInit {
-  finalOrder$ = this.summarySvc.summaryAction$;
+  finalOrder$ = this.summarySvc.finalOrder$;
   totalOrder$ = this.summarySvc.totalAction$;
 
-  constructor( private summarySvc:SummaryService) {}
+  //item!: Options;
+
+  constructor(private summarySvc: SummaryService) { }
 
   ngOnInit(): void {
   }
 
-  onClickDelete(id:any): void{
-    this.summarySvc.deleteProduct(id.getAttribute("data-id"));
+  lessItem(dataID: any): void {
+    this.summarySvc.lessProduct(dataID.getAttribute('data-id'))
+    //this.summarySvc.lessProduct(event.srcElement.attributes.id.value)
+    //console.log(dataID.getAttribute('data-id'));
   }
 
-  onClickLess(id:any): void{
-    this.summarySvc.lessProduct(id.getAttribute("data-id"));
+  deleteItem(dataID: any): void {
+    this.summarySvc.deleteProduct(dataID.getAttribute('data-id'))
+    //console.log(dataID.getAttribute('data-id'));
   }
-
-
+//
 }

@@ -16,18 +16,19 @@
   </div>
   <div class="row resume-h text-white div-res">
     <div class="col">
-      <div class="row " *ngFor="let item of finalOrder$ | async">
+      <div class="row" *ngFor='let item of finalOrder$ | async'>
         <div class="col-1">
-          <button class="btn p-0" #dataId [attr.data-id]= "item.id">
-            <img (click)= "onClickLess(dataId)" class="img-btn" src="../../../assets/img/menosIcon.png" alt="menos"></button>
-        </div>
-        <div class="col-1 ps-2">
-          <button class="btn p-0" #dataId [attr.data-id]= "item.id">
-            <img (click)= "onClickDelete(dataId)" class="img-btn" src="../../../assets/img/basuraIcon.png" alt="menos">
+          <button class="btn p-0" #dataID [attr.data-id]="item.id">
+            <img class="img-btn" (click)="lessItem(dataID)" src="../../../assets/img/menosIcon.png" alt="menos">
           </button>
         </div>
-        <div class="col-5 col-xl-4 ps-1">
-          <p class="mb-1 resume-font">{{item.name | titlecase}}</p>
+        <div class="col-1 ps-2">
+          <button class="btn p-0" #dataID [attr.data-id]="item.id">
+            <img class="img-btn" (click)="deleteItem(dataID)" src="../../../assets/img/basuraIcon.png" alt="menos">
+          </button>
+        </div>
+        <div class="col-5 col-xl-4 ps-2">
+          <p class="mb-1" >{{item.name}}</p>
         </div>
         <div class="col-1 col-xl-2 text-center">
           <p class="mb-1">{{item.qty}}</p>
@@ -36,7 +37,7 @@
           <p class="mb-1">{{item.price | currency}}</p>
         </div>
         <div class="col-2">
-          <p class="mb-1">{{item.price * item.qty | currency}}</p>
+          <p class="mb-1">{{item.qty * item.price | currency}}</p>
         </div>
       </div>
     </div>
