@@ -20,18 +20,23 @@ import { MenuNavComponent } from './menu/components/menu-nav/menu-nav.component'
 import { WaiterHeaderComponent } from './waiter/components/waiter-header/waiter-header.component';
 import { WaiterOkComponent } from './waiter/components/waiter-ok/waiter-ok.component';
 import { WaiterDoneComponent } from './waiter/components/waiter-done/waiter-done.component';
-
-import { MenuService } from "./services/menu.service";
 import { MenuNavTabComponent } from './menu/components/menu-nav/menu-nav-tab/menu-nav-tab.component';
 import { MenuTabContentComponent } from './menu/components/menu-nav/menu-tab-content/menu-tab-content.component';
 import { TabContentBtnComponent } from './menu/components/menu-nav/menu-tab-content/tab-content-btn/tab-content-btn.component';
 
+import { MenuService } from "./services/menu.service";
+import { FireStoreService } from "../core/shared/services/fire-store.service";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
 
 @NgModule({
-    imports:[
+    imports:[   
         CommonModule,
         PublicRoutingModule,
-        SharedModule
+        SharedModule,
+        FormsModule,
+        ReactiveFormsModule
+
     ],
     declarations:[
     PublicComponent,
@@ -56,7 +61,8 @@ import { TabContentBtnComponent } from './menu/components/menu-nav/menu-tab-cont
   ],
     exports:[],
     providers:[
-        MenuService
+        MenuService,
+        FireStoreService
     ]
 })
 

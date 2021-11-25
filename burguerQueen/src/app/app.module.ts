@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-//import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,12 +17,12 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     AppComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     CoreModule,
-    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    //provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore())
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    ReactiveFormsModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
