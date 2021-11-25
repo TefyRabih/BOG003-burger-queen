@@ -10,20 +10,12 @@
            "name": "Hamburguesa",
            "options": [
              {
-<<<<<<< HEAD
-               "id": "acH1",
-=======
                "id": "m1ac1op1",
->>>>>>> pruebas
                "name": "sencilla",
                "price": 10
              },
              {
-<<<<<<< HEAD
-              "id": "acH2",
-=======
                "id": "m1ac1op2",
->>>>>>> pruebas
                "name": "doble",
                "price": 10
              }
@@ -34,31 +26,16 @@
            "name": "Tipo",
            "options": [
              {
-<<<<<<< HEAD
-              "id": "acT1",
-=======
                "id": "m1ac2op1",
->>>>>>> pruebas
-               "name": "res",
-               "price": 0
+               "name": "res"
              },
              {
-<<<<<<< HEAD
-              "id": "acT2",
-=======
                "id": "m1ac2op2",
->>>>>>> pruebas
-               "name": "pollo",
-               "price": 0
+               "name": "pollo"
              },
              {
-<<<<<<< HEAD
-              "id": "acT3",
-=======
                "id": "m1ac2op3",
->>>>>>> pruebas
-               "name": "vegetariana",
-               "price": 0
+               "name": "vegetariana"
              }
            ]
          },
@@ -67,20 +44,12 @@
            "name": "Acompañamiento",
            "options": [
              {
-<<<<<<< HEAD
-              "id": "acA1",
-=======
                "id": "m1ac3op1",
->>>>>>> pruebas
                "name": "papas fritas",
                "price": 5
              },
              {
-<<<<<<< HEAD
-              "id": "acA2",
-=======
                "id": "m1ac3op2",
->>>>>>> pruebas
                "name": "aros de cebolla",
                "price": 10
              }
@@ -91,38 +60,22 @@
            "name": "Bebidas",
            "options": [
              {
-<<<<<<< HEAD
-              "id": "acB1",
-=======
                "id": "m1ac4op1",
->>>>>>> pruebas
                "name": "agua 500ml",
                "price": 5
              },
              {
-<<<<<<< HEAD
-              "id": "acB2",
-=======
                "id": "m1ac4op2",
->>>>>>> pruebas
                "name": "agua 700ml",
                "price": 7
              },
              {
-<<<<<<< HEAD
-              "id": "acB3",
-=======
                "id": "m1ac4op3",
->>>>>>> pruebas
                "name": "gaseosa 500ml",
                "price": 7
              },
              {
-<<<<<<< HEAD
-              "id": "acB4",
-=======
                "id": "m1ac4op4",
->>>>>>> pruebas
                "name": "gaseosa 700ml",
                "price": 10
              }
@@ -140,20 +93,12 @@
            "name": "Cafe",
            "options": [
              {
-<<<<<<< HEAD
-              "id": "dc1",
-=======
                "id": "m2d1op1",
->>>>>>> pruebas
                "name": "americano",
                "price": 5
              },
              {
-<<<<<<< HEAD
-              "id": "dc2",
-=======
                "id": "m2d1op2",
->>>>>>> pruebas
                "name": "con leche",
                "price": 7
              }
@@ -164,11 +109,7 @@
            "name": "Sandwich",
            "options": [
              {
-<<<<<<< HEAD
-              "id": "dS1",
-=======
                "id": "m2d2op1",
->>>>>>> pruebas
                "name": "jamon y queso",
                "price": 10
              }
@@ -179,11 +120,7 @@
            "name": "Bebidas",
            "options": [
              {
-<<<<<<< HEAD
-              "id": "dB1",
-=======
                "id": "m2d3op1",
->>>>>>> pruebas
                "name": "jugo natural",
                "price": 7
              }
@@ -201,20 +138,12 @@
            "name": "Adicionales",
            "options": [
              {
-<<<<<<< HEAD
-              "id": "aA1",
-=======
                "id": "m3a1op1",
->>>>>>> pruebas
                "name": "huevo",
                "price": 1
              },
              {
-<<<<<<< HEAD
-              "id": "aA2",
-=======
                "id": "m3a1op2",
->>>>>>> pruebas
                "name": "queso",
                "price": 1
              }
