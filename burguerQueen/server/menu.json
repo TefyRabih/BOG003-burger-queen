@@ -27,15 +27,18 @@
            "options": [
              {
                "id": "m1ac2op1",
-               "name": "res"
+               "name": "res",
+               "price": 0
              },
              {
                "id": "m1ac2op2",
-               "name": "pollo"
+               "name": "pollo",
+               "price": 0
              },
              {
                "id": "m1ac2op3",
-               "name": "vegetariana"
+               "name": "vegetariana",
+               "price": 0
              }
            ]
          },

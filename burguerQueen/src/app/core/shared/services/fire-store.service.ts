@@ -14,13 +14,22 @@ export class FireStoreService {
  // order$: Observable<Orders[]>;
   private orderCollection:  AngularFirestoreCollection<Orders>;
 
-  constructor(private afs: AngularFirestore) {  
+  constructor(private afs: AngularFirestore) {
     this.orderCollection = afs.collection<Orders>('orders');
-    
+
   }
 
 
-  addOrder(newOrder: Orders): void{
-    this.orderCollection.add(newOrder);
+  addOrder(newOrder: Orders, orderId: string): Promise<void>{
+    return new Promise(async(res, reject) => {
+      try{
+        const OrId = orderId || this.afs.createId();
+        const data = {OrId, ...newOrder};
+        const result = this.orderCollection.doc(OrId).set(data);
+        res(result)
+      }catch(error){
+        reject(error.message)
+      }
+    })
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FireStoreService } from '../../../core/shared/services/fire-store.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
@@ -11,24 +11,27 @@ export class MainComponent implements OnInit {
 
   orderGroup!: FormGroup;
 
-  constructor(private orderService: FireStoreService) { 
+  constructor(private orderService: FireStoreService) {
    // this.orderGroup = this.createFormGroup();
   }
- 
+
   ngOnInit(): void {
     this.createFormGroup();
   }
 
   createFormGroup() {
   this.orderGroup = new FormGroup({
-      customerName: new FormControl (''),
-      table: new FormControl ('')
-
+      customerName: new FormControl ('', { validators: Validators.required }),
+      table: new FormControl (null, { validators: Validators.required })
     });
   }
 
   onSubmit(){
-    console.log(this.orderGroup.controls.table.value);   
+    if (!this.orderGroup.valid) {
+      console.log('error');
+    } else {
+      console.log(this.orderGroup.controls.table.value);
+    }
   }
 
 }
