@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Orders } from 'src/app/interfaces/orders.interface';
 import { FireStoreService } from '../../../../core/shared/services/fire-store.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { FireStoreService } from '../../../../core/shared/services/fire-store.se
   styleUrls: ['./menu-header.component.css']
 })
 export class MenuHeaderComponent implements OnInit {
-
+  @Input() el!: Orders;
   constructor(private orderService: FireStoreService) { }
 
   ngOnInit(): void {

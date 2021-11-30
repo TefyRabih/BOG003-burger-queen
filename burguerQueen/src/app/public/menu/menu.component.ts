@@ -24,6 +24,8 @@ export class MenuComponent implements OnInit {
     }*/
 
     getCustomerData(): void{
+
+      
       this.orderService.customer$
       .subscribe(
         response => {
@@ -34,4 +36,8 @@ export class MenuComponent implements OnInit {
       )
     }
 
+    createOrder(order: any):void{
+      console.log('Holis', order);
+      
+    }
 }
