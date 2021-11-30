@@ -36,14 +36,29 @@ export class FireStoreService {
         const result = this.orderCollection.doc(id.id).set(data);
         this.currentId = id.id;
         res(result)
-      }catch(error){
+      }catch(error:any){
         reject(error.message)
       }
     })
   }
 
   getCustomerData(id: string): void{
-    this.customer$ = this.orders$.pipe(map(data => data.filter(el => el.id === id)))
+    console.log(this.orders$);
+    
+    this.customer$ = this.orders$.pipe(map(data => data.filter(el => el.id === id)));
+    
+    /* this.orderCollection.doc('1cWne5y5tivCZxshiRAe').update({ order: [{
+      id: '1',
+      name: 'stef',
+      price: 5,
+      qty: 3
+     }] 
+    }) */
+  }
+  insertOrder(id:string, order:Orders): void{
+    this.orderCollection.doc(id).update(order);
   }
 
 }
+
+// 1cWne5y5tivCZxshiRAe
