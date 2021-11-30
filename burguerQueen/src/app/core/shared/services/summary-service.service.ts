@@ -5,6 +5,7 @@ import { Options } from 'src/app/interfaces/menu.interface';
 @Injectable({
   providedIn: 'root',
 })
+
 export class SummaryService {
   summary: Options[] = [];
 
