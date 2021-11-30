@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FireStoreService } from '../../core/shared/services/fire-store.service';
+import { Orders } from '../../interfaces/orders.interface'
+
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  costumerData!: Orders[];
+
+  constructor( private orderService: FireStoreService ) { }
 
   ngOnInit(): void {
+    this.orderService.getCustomerData(this.orderService.currentID);
+    this.getCustomerData();
   }
+
+    /*getCurrentId(): void{
+      console.log(this.orderService.currentID)
+    }*/
+
+    getCustomerData(): void{
+      this.orderService.customer$
+      .subscribe(
+        response => {
+          this.costumerData = response;
+          console.log(response);
+        },
+        error => console.log(error)
+      )
+    }
 
 }

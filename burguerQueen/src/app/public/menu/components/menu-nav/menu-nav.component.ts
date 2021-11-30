@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Menu } from 'src/app/interfaces/menu.interface';
 import { MenuService } from 'src/app/public/services/menu.service';
 import { SummaryService } from 'src/app/core/shared/services/summary.service';
+//import { FireStoreService } from '../../../../core/shared/services/fire-store.service';
 
 import { tap } from 'rxjs/operators'
 
@@ -15,7 +16,10 @@ export class MenuNavComponent implements OnInit {
   menuData!: Menu[];
   finalOrder$ = this.summarySvc.finalOrder$;
 
-  constructor(private dataService: MenuService, private summarySvc: SummaryService) { }
+  constructor(
+    private dataService: MenuService,
+    private summarySvc: SummaryService
+  ) { }
 
   ngOnInit(): void {
     this.getData();
@@ -39,4 +43,5 @@ export class MenuNavComponent implements OnInit {
       .pipe(tap(res => console.log(res)))
       .subscribe();
   }
+
 }
