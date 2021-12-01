@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Options } from 'src/app/interfaces/menu.interface';
 import { FireStoreService } from '../../core/shared/services/fire-store.service';
 import { Orders } from '../../interfaces/orders.interface'
 
@@ -12,7 +14,7 @@ export class MenuComponent implements OnInit {
 
   costumerData!: Orders[];
 
-  constructor( private orderService: FireStoreService ) { }
+  constructor( private orderService: FireStoreService, private router: Router ) { }
 
   ngOnInit(): void {
     this.orderService.getCustomerData(this.orderService.currentID);
@@ -30,14 +32,13 @@ export class MenuComponent implements OnInit {
       .subscribe(
         response => {
           this.costumerData = response;
-          console.log(response);
         },
         error => console.log(error)
       )
     }
 
-    createOrder(order: any):void{
-      console.log('Holis', order);
-      
+    createOrder(order: Options[]):void{
+      this.orderService.insertOrder(this.orderService.currentID, order)
+      this.router.navigate(['home'])
     }
 }

@@ -4,7 +4,7 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/comp
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators'
 import { Orders } from '../../../interfaces/orders.interface';
-
+import { Options } from '../../../interfaces/menu.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -43,7 +43,6 @@ export class FireStoreService {
   }
 
   getCustomerData(id: string): void{
-    console.log(this.orders$);
     
     this.customer$ = this.orders$.pipe(map(data => data.filter(el => el.id === id)));
     
@@ -55,8 +54,8 @@ export class FireStoreService {
      }] 
     }) */
   }
-  insertOrder(id:string, order:Orders): void{
-    this.orderCollection.doc(id).update(order);
+  insertOrder(id:string, orderData: Options[]): void{
+    this.orderCollection.doc(id).update({order: orderData});
   }
 
 }
