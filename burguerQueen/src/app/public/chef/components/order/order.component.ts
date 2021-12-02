@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FireStoreService } from 'src/app/core/shared/services/fire-store.service';
+import { Orders } from 'src/app/interfaces/orders.interface';
 
 @Component({
   selector: 'app-order',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderComponent implements OnInit {
 
-  constructor() { }
+  arrayData!: Orders[];  
+  milliseconds!: number;
+
+  constructor(private orderService: FireStoreService) { }
 
   ngOnInit(): void {
+    this.getDataOrders();
   }
+
+  getDataOrders(): void{     
+    this.orderService.dataOrders$
+    .subscribe(
+      response => {
+       this.arrayData = response;
+       console.log('data de order',response);
+       
+      },
+      error => console.log(error)
+    )
+  }
+
 
 }

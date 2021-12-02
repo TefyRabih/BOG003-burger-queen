@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Orders } from 'src/app/interfaces/orders.interface';
-import { FireStoreService } from '../../../../core/shared/services/fire-store.service';
 
 @Component({
   selector: 'app-menu-header',
@@ -9,7 +8,7 @@ import { FireStoreService } from '../../../../core/shared/services/fire-store.se
 })
 export class MenuHeaderComponent implements OnInit {
   @Input() el!: Orders;
-  constructor(private orderService: FireStoreService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
