@@ -11,6 +11,7 @@ export class MenuService {
 
   constructor(private http: HttpClient) {}
 
+  //Llamada http para alojar data en el observable
   getData(): Observable<Menu[]>{
     return this.http.get<Menu[]>('http://localhost:3333/menu').pipe(
       catchError(this.handleError)

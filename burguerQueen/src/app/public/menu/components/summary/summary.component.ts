@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SummaryService } from '../../../../core/shared/services/summary.service'
-// import { Options } from '../../../../interfaces/menu.interface'
 
 @Component({
   selector: 'app-summary',
@@ -17,13 +16,13 @@ export class SummaryComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  // Resta -1 a la cantidad del producto
   lessItem(dataID: any): void {
     this.summarySvc.lessProduct(dataID.getAttribute('data-id'))
     //this.summarySvc.lessProduct(event.srcElement.attributes.id.value)
-    //console.log(dataID.getAttribute('data-id'));
   }
-
+  // Elimina todo el producto
   deleteItem(dataID: any): void {
     this.summarySvc.deleteProduct(dataID.getAttribute('data-id'))
     //console.log(dataID.getAttribute('data-id'));
