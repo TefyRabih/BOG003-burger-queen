@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FireStoreService } from 'src/app/core/shared/services/fire-store.service';
+import { Orders } from 'src/app/interfaces/orders.interface';
 
 @Component({
   selector: 'app-preparations',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./preparations.component.css']
 })
 export class PreparationsComponent implements OnInit {
+  
+  @Input() item!: Orders;
 
-  constructor() { }
+  constructor(private orderService: FireStoreService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
+  onClick(item: Orders): void{
+    this.orderService.editDone(item.id)
+  }  
 }

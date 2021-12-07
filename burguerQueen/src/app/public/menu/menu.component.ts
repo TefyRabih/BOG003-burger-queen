@@ -26,11 +26,10 @@ export class MenuComponent implements OnInit {
     }*/
 
     getCustomerData(): void{
-      this.orderService.customer$
+      this.orderService.getCustomerData(this.orderService.currentID)
       .subscribe(
         response => {
           console.log('customerdata', response);
-          
           this.costumerData = response;
         },
         error => console.log(error)
