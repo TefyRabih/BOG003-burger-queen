@@ -1,7 +1,7 @@
 # Burger Queen
 ![](https://i.imgur.com/YTfqUMr.png)
 
-### **Realizado por Estefania Rabih y Lizeth Del Rio**
+### *Realizado por Estefania Rabih y Lizeth Del Rio*
 
 
 ## Índice
