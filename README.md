@@ -1,7 +1,7 @@
 # Burger Queen
 ![](https://i.imgur.com/YTfqUMr.png)
 
-
+### **Realizado por Estefania Rabih y Lizeth Del Rio**
 
 
 ## Índice
@@ -29,21 +29,21 @@ Burguer Queen es una interfaz web pensada para tablet que permite mejorar el pro
 * Haciendo uso de Angular como framework, crear una interfaz web que permita tomar y procesar los pedidos de un restaurante, manteniendo el estado en pantalla sincronizado.
 
 ## 4. Prototipo
-![](https://i.imgur.com/PnzLKoJ.png)
+![ Prototipos1 ](https://i.imgur.com/PnzLKoJ.png)
 
-![](https://i.imgur.com/EwAJrOx.png)
+![ Prototipos2 ](https://i.imgur.com/EwAJrOx.png)
 
 ## 5. Mockup
-![](https://i.imgur.com/5nnJ5HW.png)
+![ Vista1 ](https://i.imgur.com/5nnJ5HW.png)
 
-![](https://i.imgur.com/My9VglF.png)
+![ Vista2 ](https://i.imgur.com/My9VglF.png)
 
-![](https://i.imgur.com/5OWjQPH.png)
+![ Vista3 ](https://i.imgur.com/5OWjQPH.png)
 
-![](https://i.imgur.com/1YDU2rA.png)
+![ Vista4 ](https://i.imgur.com/1YDU2rA.png)
 
 ## 6. Resultado Final
 
-![](https://i.imgur.com/WFrHT7z.gif)
+![ Final ](https://i.imgur.com/WFrHT7z.gif)
 
 ## 7. Testeo
