@@ -7,4 +7,6 @@ export interface Orders {
   table: number;
   order: Options[];
   preparation: boolean; 
+  done:boolean;
+  delivered:boolean;
 }

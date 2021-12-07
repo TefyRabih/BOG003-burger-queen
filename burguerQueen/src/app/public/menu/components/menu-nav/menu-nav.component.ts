@@ -40,7 +40,7 @@ export class MenuNavComponent implements OnInit {
   getOrderOptions(){
     this.summarySvc.finalOrder$.subscribe(
       res =>{
-        this.orderOptions = res;
+        this.orderOptions = res
       },
       error => console.log(error)
     )
