@@ -44,6 +44,15 @@ Burguer Queen es una interfaz web pensada para tablet que permite mejorar el pro
 
 ## 6. Resultado Final
 
-![ Final ](https://i.imgur.com/WFrHT7z.gif)
+![Final Vista1](https://i.imgur.com/UupbpXi.png)
+
+![ Final Vista2 ](https://i.imgur.com/F1hn71T.png)
+
+![ Final Vista3 ](https://i.imgur.com/iT1NutA.png)
+
+![ Final Vista4 ](https://i.imgur.com/rjUTxOJ.png)
+
+![ Final Vista5 ](https://i.imgur.com/enyHcNt.png)
+
 
 ## 7. Testeo
