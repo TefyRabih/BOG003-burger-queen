@@ -2,10 +2,10 @@
   <app-header></app-header>
   <main class="order-h row">
     <section class="col d-flex flex-wrap justify-content-center align-content-start pt-2 ms-2 me-1 mb-2 mt-2" id="pending">
-      <app-order>[item]= "item" [i]="i" *ngFor='let item of arrayData; let i = index'</app-order>
+      <app-order [item]= "item" [i]="i" *ngFor='let item of arrayData; let i = index'></app-order>
     </section>
     <section class="otro col border border-light rounded p-0 ms-1 me-2 mb-2 mt-2 d-flex flex-wrap justify-content-center" id="preparation">
-     <app-preparations>[item]= "item" *ngFor='let item of arrayData'</app-preparations>
+     <app-preparations [item]= "item" *ngFor='let item of arrayData'></app-preparations>
     </section>
   </main>
 </div>
