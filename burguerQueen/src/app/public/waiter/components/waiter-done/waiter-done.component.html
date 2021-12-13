@@ -1,16 +1,8 @@
-<div class="d-flex flex-row justify-content-evenly">
-  <div class="card text-center card-ok-w bg-dark border border-light text-white" style="width: 18rem;">
+<div [ngStyle] = "{'display' : item.delivered !== true ? 'none' : ''}" 
+class="card text-center card-ok-w bg-dark border border-light text-white m-1">
     <div class="card-body">
-      <h4 class="card-title">#Pedido</h4>
-      <p class="fs-5 fw-light card-text">Nombre del Cliente</p>
+      <h4 class="card-title">{{item.customerName}}</h4>
+      <p class="fs-6 fw-light card-text">{{item.id}}</p>
       <button class="btn btn-warning gradient-yellow" type="button" name="button" disabled>Realizar pago</button>
     </div>
-  </div>
-  <div class="card text-center card-ok-w bg-dark border border-light text-white" style="width: 18rem;">
-    <div class="card-body">
-      <h4 class="card-title">#Pedido</h4>
-      <p class="fs-5 fw-light card-text">Nombre del Cliente</p>
-      <button class="btn btn-warning gradient-yellow" type="button" name="button" disabled>Realizar pago</button>
-    </div>
-  </div>
 </div>

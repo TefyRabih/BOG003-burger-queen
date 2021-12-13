@@ -27,7 +27,4 @@ export class WaiterComponent implements OnInit {
       error => console.log(error)
     )
   }
-
-
-
 }

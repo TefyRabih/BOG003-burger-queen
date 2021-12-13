@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FireStoreService } from 'src/app/core/shared/services/fire-store.service';
+import { Orders } from 'src/app/interfaces/orders.interface';
 
 @Component({
   selector: 'app-waiter-ok',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WaiterOkComponent implements OnInit {
 
-  constructor() { }
+  @Input() item!: Orders;
+
+  constructor(private orderService: FireStoreService) { }
 
   ngOnInit(): void {
+  }
+
+  onClick(item: Orders): void{
+    this.orderService.editDelivered(item.id)
   }
 
 }

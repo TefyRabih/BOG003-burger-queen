@@ -1,11 +1,11 @@
 <div class="container-fluid bg-primary cont-h">
   <app-waiter-header></app-waiter-header>
   <main class="row order-h bg-img">
-    <section class="col bg-op mt-2 ms-2 mb-2 me-1 d-flex flex-row ">
-      <app-waiter-ok></app-waiter-ok>
+    <section class="col bg-op mt-2 ms-2 mb-2 me-1 d-flex flex-wrap aling-content-start">
+      <app-waiter-ok [item]= "item" *ngFor= 'let item of arrayData'></app-waiter-ok>
     </section>
-    <section class="col bg-op mt-2 ms-1 mb-2 me-2 pt-2">
-      <app-waiter-done></app-waiter-done>
+    <section class="col bg-op mt-2 ms-1 mb-2 me-2 p-0 d-flex flex-wrap justify-content-evenly aling-content-start">
+      <app-waiter-done [item]= "item" *ngFor= 'let item of arrayData'></app-waiter-done>
     </section>
   </main>
 </div>

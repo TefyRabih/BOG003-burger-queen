@@ -1,26 +1,9 @@
-<div class="text-center">
-  <button class="btn btn-success gradient-green btn-ok-w p-1 m-2" type="button" name="button">
+<button (click)="onClick(item)" [ngStyle]="{'display': item.done !== true || item.delivered === true ? 'none': ''}"
+  class="btn btn-success gradient-green btn-ok-w p-1 m-2" type="button" name="button">
     <div class="d-flex justify-content-between border-bottom border-info border-2">
-      <h4 class="mb-0 ps-2 pb-1 fw-bold">#pedido</h4>
-      <h4 class="mb-0 pe-2 pb-1 fw-bold">hora</h4>
+      <h4 class="mb-0 ps-2 pb-1 fw-bold">{{item.customerName}}</h4>
+      <h4 class="mb-0 pe-2 pb-1 fw-bold">{{item.date.seconds*1000 | date: 'shortTime'}}</h4> 
     </div>
-    <p class="mb-0 ps-2 fw-normal">Nombre del Cliente</p>
-    <p class="mb-0 ps-2 fw-normal">#Mesa</p>
-  </button>
-  <button class="btn btn-success gradient-green btn-ok-w p-1 m-2" type="button" name="button">
-    <div class="d-flex justify-content-between border-bottom border-info border-2">
-      <h4 class="mb-0 ps-2 pb-1 fw-bold">#pedido</h4>
-      <h4 class="mb-0 pe-2 pb-1 fw-bold">hora</h4>
-    </div>
-    <p class="mb-0 ps-2 fw-normal">Nombre del Cliente</p>
-    <p class="mb-0 ps-2 fw-normal">#Mesa</p>
-  </button>
-  <button class="btn btn-success gradient-green btn-ok-w p-1 m-2" type="button" name="button">
-    <div class="d-flex justify-content-between border-bottom border-info border-2">
-      <h4 class="mb-0 ps-2 pb-1 fw-bold">#pedido</h4>
-      <h4 class="mb-0 pe-2 pb-1 fw-bold">hora</h4>
-    </div>
-    <p class="mb-0 ps-2 fw-normal">Nombre del Cliente</p>
-    <p class="mb-0 ps-2 fw-normal">#Mesa</p>
-  </button>
-</div>
+    <p class="mb-0 ps-2 fw-normal id-p-size">{{item.id}}</p>  
+    <p class="mb-0 ps-2 fw-normal table-p-size">{{item.table}}</p>
+</button>

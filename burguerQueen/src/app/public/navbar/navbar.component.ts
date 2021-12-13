@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FireStoreService } from 'src/app/core/shared/services/fire-store.service';
+import { Orders } from 'src/app/interfaces/orders.interface';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  arrayDoneTrue: Orders[] = [];
+
+  constructor(private orderService: FireStoreService) { }
 
   ngOnInit(): void {
+    this.getDoneTrue();
   }
-
+  
+  getDoneTrue(): void{
+    this.orderService.getDoneTrue()
+    .subscribe(
+      response => {
+        this.arrayDoneTrue = response;
+      },
+      error => console.error(error)
+      
+    )
+  }
 }

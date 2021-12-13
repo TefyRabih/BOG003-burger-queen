@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 //import { Firestore, collectionData, collection } from '@angular/fire/firestore';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { filter, map } from 'rxjs/operators'
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators'
 import { Orders } from '../../../interfaces/orders.interface';
 import { Options } from '../../../interfaces/menu.interface';
 
@@ -56,7 +56,16 @@ export class FireStoreService {
   }
   // Metodo que permite insertar el resumen a la data del cliente actual
   insertOrder(id:string, orderData: Options[]): void{
-    this.orderCollection.doc(id).update({order: orderData, date: new Date(), preparation: false, done: false});
+    this.orderCollection.doc(id).update({
+      order: orderData, 
+      date: new Date(), 
+      preparationDate: new Date(),
+      doneDate: new Date(),
+      deliveredDate: new Date(),
+      preparation: false, 
+      done: false,
+      delivered: false,
+    });
   }
   // Metodo que permite obtener toda la data de la collecion orders en tiempo real 
   getDataOrders(): void{
@@ -70,6 +79,12 @@ export class FireStoreService {
     this.orderCollection.doc(id).update({preparation:true});
   }
   editDone(id:string): void{
-    this.orderCollection.doc(id).update({done:true});
+    this.orderCollection.doc(id).update({done:true, doneDate: new Date()});
+  }
+  editDelivered(id:string): void{
+    this.orderCollection.doc(id).update({delivered: true, deliveredDate: new Date()});
+  }
+  getDoneTrue(): Observable<Orders[]>{
+    return this.orders$.pipe(map(data => data.filter(el => el.done === true && el.delivered === false)));
   }
 }
